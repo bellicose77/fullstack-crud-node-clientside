@@ -9,14 +9,14 @@ import UpdateUser from "./componets/UpdateUser/UpdateUser";
 function App() {
   return (
     <div className="App">
-      <Router>
+    
         <Header/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path ='/adduser' element={<AddUser/>}/>
-          <Route path ='/update user' element={<UpdateUser/>}/>
+          <Route path ='/update' element={<UpdateUser/>}/>
         </Routes>
-      </Router>
+      
     </div>
   );
 }
