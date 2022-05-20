@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AddUser = () => {
-    const handleSubmit = () =>{
-        
+    const [user,setUser] = useState([]);
+    const handleSubmit = (e) =>{
+       e.preventDefault();
     }
     return (
         <div>
