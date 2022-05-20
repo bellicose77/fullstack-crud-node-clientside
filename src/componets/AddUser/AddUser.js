@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 const AddUser = () => {
     const [user,setUser] = useState([]);
+    const nameref = useRef('');
+    const emailref = useRef('')
     const handleSubmit = (e) =>{
        e.preventDefault();
+       console.log("hitting the button");
     }
     return (
         <div>
