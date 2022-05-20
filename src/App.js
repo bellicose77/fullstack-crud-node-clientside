@@ -4,6 +4,7 @@ import Header from "./componets/Header/Header";
 import Home from "./componets/Home/Home";
 import UpdateUser from "./componets/UpdateUser/UpdateUser";
 
+import './App.css'
 
 
 function App() {
