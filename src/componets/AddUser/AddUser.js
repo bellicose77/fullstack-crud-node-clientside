@@ -7,11 +7,14 @@ const AddUser = () => {
     const handleSubmit = (e) =>{
         const name = nameref.current.value;
         const email = emailref.current.value;
-        console.log(name);
-        console.log(email);
-       e.preventDefault();
-       console.log("hitting the button");
+        // console.log(name);
+        // console.log(email);
+        const data ={name,email};
+        setUser(data);
+        e.preventDefault();
+    //    console.log("hitting the button");
     }
+    console.log(user);
     return (
         <div>
             <h2>Add user here</h2>
