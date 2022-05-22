@@ -20,6 +20,7 @@ const AddUser = () => {
 
 
         })
+        .then(res =>res.json())
 
         setUser(data);
         e.preventDefault();
