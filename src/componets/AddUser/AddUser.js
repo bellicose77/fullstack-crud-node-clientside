@@ -10,6 +10,17 @@ const AddUser = () => {
         // console.log(name);
         // console.log(email);
         const data ={name,email};
+        fetch('http://localhost:5000/user',
+        {
+            method:'POST',
+            headers:{
+                'Content-type':'application/json'
+            },
+            body: JSON.stringify(data)
+
+
+        })
+
         setUser(data);
         e.preventDefault();
     //    console.log("hitting the button");
