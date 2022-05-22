@@ -5,6 +5,7 @@ const AddUser = () => {
     const nameref = useRef('');
     const emailref = useRef('');
     const handleSubmit = (e) =>{
+        e.preventDefault();
         const name = nameref.current.value;
         const email = emailref.current.value;
         // console.log(name);
@@ -20,12 +21,15 @@ const AddUser = () => {
 
 
         })
-        .then(res =>{
-            console.log(res)
+        .then(res =>res.json())
+        .then(data=>{
+            if(data.inserttedId){
+                alert("user added");
+            }
         })
 
         setUser(data);
-        e.preventDefault();
+        
     //    console.log("hitting the button");
     }
     console.log(user);
