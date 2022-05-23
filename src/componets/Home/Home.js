@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Home = () => {
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/user')
+    },[])
     return (
         <div>
-            <h2>This is home user</h2>
+           
         </div>
     );
 };
