@@ -23,7 +23,7 @@ const AddUser = () => {
         })
         .then(res =>res.json())
         .then(data=>{
-            if(data.inserttedId){
+            if(data.insertedId){
                 alert("user added");
             }
         })
