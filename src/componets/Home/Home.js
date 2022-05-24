@@ -9,7 +9,10 @@ const Home = () => {
     },[]);
 
     const handleDelete = id =>{
-        console.log(id);
+       const url = `http://localhost:5000/user/${id}`;
+       fetch(url,{
+           method:'DELETE'
+       })
     }
     return (
         <div>
