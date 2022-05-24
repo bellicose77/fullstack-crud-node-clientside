@@ -9,11 +9,13 @@ const Home = () => {
     },[])
     return (
         <div>
-           <h>Total user in : {user.length}</h>
+           <h>Total user in : {users.length}</h>
 
            <ul>
                {
-
+                   users.map(user=><li>{user.name} ::
+                   {user.email}
+                   </li>)
                }
            </ul>
         </div>
