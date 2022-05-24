@@ -15,6 +15,8 @@ const Home = () => {
                {
                    users.map(user=><li>{user.name} ::
                    {user.email}
+                   <button>update</button>
+                   <button>X</button>
                    </li>)
                }
            </ul>
