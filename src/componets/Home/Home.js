@@ -6,7 +6,11 @@ const Home = () => {
         fetch('http://localhost:5000/user')
         .then(res =>res.json())
         .then(data=>setUsers(data));
-    },[])
+    },[]);
+
+    const handleDelete = id =>{
+        console.log(id);
+    }
     return (
         <div>
            <h>Total user in : {users.length}</h>
@@ -16,7 +20,7 @@ const Home = () => {
                    users.map(user=><li>{user.name} ::
                    {user.email}
                    <button>update</button>
-                   <button>X</button>
+                   <button onClick={()=>handleDelete(user._id)}>X</button>
                    </li>)
                }
            </ul>
