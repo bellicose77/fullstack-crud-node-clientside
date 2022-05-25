@@ -5,11 +5,11 @@ const UpdateUser = () => {
     const {id} = useParams();
     const [user,setUser]=useState({});
     useEffect(()=>{
-        const url = `http://localhost:5000/user/${id}`
+        const url =`http://localhost:5000/user/${id}`
         fetch(url)
         .then(res=>res.json())
         .then(data=>setUser(data))
-    },[]);
+    },[])
 
     const handleSubmit =(e)=>{
         e.preventDefault();
@@ -18,8 +18,8 @@ const UpdateUser = () => {
         <div>
             <h2>Update user: {user.name}</h2>
             <form onSubmit={handleSubmit}>
-               <input type="text"/>
-               <input type="email"/>
+               <input type="text" value={user.name}/>
+               <input type="email" value={user.email}/>
                <input type="submit"/>
             </form>
         </div>
