@@ -18,7 +18,7 @@ const UpdateUser = () => {
         <div>
             <h2>Update user: {user.name}</h2>
             <form onSubmit={handleSubmit}>
-
+               <input type="text"/>
             </form>
         </div>
     );
