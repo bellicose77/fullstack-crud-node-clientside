@@ -13,7 +13,9 @@ const UpdateUser = () => {
      
     const handleName = e=>{
         const updateName = e.target.value;
-        console.log(updateName);
+        const newUser = {...user};
+        newUser.name=updateName;
+        console.log(newUser);
        
 
     }
