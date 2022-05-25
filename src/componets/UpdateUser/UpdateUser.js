@@ -28,6 +28,17 @@ const UpdateUser = () => {
     }
     const handleSubmit =(e)=>{
         e.preventDefault();
+
+        const url =`http://localhost:5000/user/${id}`;
+        fetch(url,{
+            method:'PUT',
+
+            headers:{
+                
+            }
+            
+        })
+
     }
     return (
         <div>
