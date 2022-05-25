@@ -13,6 +13,9 @@ const UpdateUser = () => {
     return (
         <div>
             <h2>Update user: {user.name}</h2>
+            <form>
+                
+            </form>
         </div>
     );
 };
