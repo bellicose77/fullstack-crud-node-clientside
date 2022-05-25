@@ -39,6 +39,13 @@ const UpdateUser = () => {
             body: JSON.stringify(user)
             
         })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.modifiedCount>0){
+                alert("data updated")
+                setUser('');
+            }
+        })
 
     }
     return (
