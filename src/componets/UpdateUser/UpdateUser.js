@@ -9,12 +9,16 @@ const UpdateUser = () => {
         fetch(url)
         .then(res=>res.json())
         .then(data=>setUser(data))
-    },[])
+    },[]);
+
+    const handleSubmit =(e)=>{
+        e.preventDefault();
+    }
     return (
         <div>
             <h2>Update user: {user.name}</h2>
-            <form>
-                
+            <form onSubmit={handleSubmit}>
+
             </form>
         </div>
     );
