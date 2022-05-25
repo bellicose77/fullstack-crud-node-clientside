@@ -11,16 +11,20 @@ const UpdateUser = () => {
         .then(data=>setUser(data))
     },[])
      
-    const handleName = e=>{
+    const handleName = e =>{
         const updateName = e.target.value;
         const newUser = {...user};
         newUser.name=updateName;
+        setUser(newUser)
         console.log(newUser);
        
 
     }
     const handleEmail = e =>{
         const updateEmail = e.target.value;
+        const updateUser = {...user};
+        updateUser.email=updateEmail;
+        setUser(updateUser);
     }
     const handleSubmit =(e)=>{
         e.preventDefault();
