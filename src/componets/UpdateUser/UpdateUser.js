@@ -13,7 +13,12 @@ const UpdateUser = () => {
      
     const handleName = e=>{
         const updateName = e.target.value;
+        console.log(updateName);
+       
 
+    }
+    const handleEmail = e =>{
+        const updateEmail = e.target.value;
     }
     const handleSubmit =(e)=>{
         e.preventDefault();
@@ -23,7 +28,7 @@ const UpdateUser = () => {
             <h2>Update user: {user.name}</h2>
             <form onSubmit={handleSubmit}>
                <input type="text" onChange={handleName} value={user.name}/>
-               <input type="email" value={user.email}/>
+               <input type="email" onChange={handleEmail} value={user.email}/>
                <input type="submit"/>
             </form>
         </div>
