@@ -6,7 +6,7 @@ const Home = () => {
     useEffect(()=>{
         fetch('http://localhost:5000/user')
         .then(res =>res.json())
-        .then(data=>setUsers(data));
+        .then(data=>setUsers(data))
     },[]);
 
     const handleDelete = id =>{
@@ -19,7 +19,7 @@ const Home = () => {
            if(data.deletedCount)
            {
                alert("deleted successfully");
-               const remaining=users.filter(user=> user._id!=id);
+               const remaining=users.filter(user=> user._id!==id)
                setUsers(remaining);
            }
        }
